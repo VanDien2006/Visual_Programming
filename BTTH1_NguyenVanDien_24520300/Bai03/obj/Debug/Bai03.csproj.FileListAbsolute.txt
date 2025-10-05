@@ -1,0 +1,8 @@
+C:\IT008_LapTrinhTrucQuan\ThucHanh\BTTH1_NguyenVanDien_24520300\Bai03\obj\Debug\Bai03.csproj.AssemblyReference.cache
+C:\IT008_LapTrinhTrucQuan\ThucHanh\BTTH1_NguyenVanDien_24520300\Bai03\obj\Debug\Bai03.csproj.CoreCompileInputs.cache
+C:\IT008_LapTrinhTrucQuan\ThucHanh\BTTH1_NguyenVanDien_24520300\Bai03\bin\Debug\Bai03.exe.config
+C:\IT008_LapTrinhTrucQuan\ThucHanh\BTTH1_NguyenVanDien_24520300\Bai03\bin\Debug\Bai03.exe
+C:\IT008_LapTrinhTrucQuan\ThucHanh\BTTH1_NguyenVanDien_24520300\Bai03\bin\Debug\Bai03.pdb
+C:\IT008_LapTrinhTrucQuan\ThucHanh\BTTH1_NguyenVanDien_24520300\Bai03\obj\Debug\Bai03.exe
+C:\IT008_LapTrinhTrucQuan\ThucHanh\BTTH1_NguyenVanDien_24520300\Bai03\obj\Debug\Bai03.pdb
+C:\IT008_LapTrinhTrucQuan\ThucHanh\BTTH1_NguyenVanDien_24520300\Bai03\obj\Debug\Bai03.exe.config
