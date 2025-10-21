@@ -1,0 +1,8 @@
+C:\Visual_Programming\BTTH2_NguyenVanDien_24520300\BTH2_24520300\bin\Debug\BTH2_24520300.exe.config
+C:\Visual_Programming\BTTH2_NguyenVanDien_24520300\BTH2_24520300\bin\Debug\BTH2_24520300.exe
+C:\Visual_Programming\BTTH2_NguyenVanDien_24520300\BTH2_24520300\bin\Debug\BTH2_24520300.pdb
+C:\Visual_Programming\BTTH2_NguyenVanDien_24520300\BTH2_24520300\obj\Debug\BTH2_24520300.csproj.AssemblyReference.cache
+C:\Visual_Programming\BTTH2_NguyenVanDien_24520300\BTH2_24520300\obj\Debug\BTH2_24520300.csproj.CoreCompileInputs.cache
+C:\Visual_Programming\BTTH2_NguyenVanDien_24520300\BTH2_24520300\obj\Debug\BTH2_24520300.exe
+C:\Visual_Programming\BTTH2_NguyenVanDien_24520300\BTH2_24520300\obj\Debug\BTH2_24520300.pdb
+C:\Visual_Programming\BTTH2_NguyenVanDien_24520300\BTH2_24520300\obj\Debug\BTH2_24520300.exe.config
