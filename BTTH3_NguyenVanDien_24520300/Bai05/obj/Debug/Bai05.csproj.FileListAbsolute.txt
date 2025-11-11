@@ -1,0 +1,11 @@
+C:\Visual_Programming\BTTH3_NguyenVanDien_24520300\Bai05\bin\Debug\Bai05.exe.config
+C:\Visual_Programming\BTTH3_NguyenVanDien_24520300\Bai05\bin\Debug\Bai05.exe
+C:\Visual_Programming\BTTH3_NguyenVanDien_24520300\Bai05\bin\Debug\Bai05.pdb
+C:\Visual_Programming\BTTH3_NguyenVanDien_24520300\Bai05\obj\Debug\Bai05.csproj.AssemblyReference.cache
+C:\Visual_Programming\BTTH3_NguyenVanDien_24520300\Bai05\obj\Debug\Bai05.Form1.resources
+C:\Visual_Programming\BTTH3_NguyenVanDien_24520300\Bai05\obj\Debug\Bai05.Properties.Resources.resources
+C:\Visual_Programming\BTTH3_NguyenVanDien_24520300\Bai05\obj\Debug\Bai05.csproj.GenerateResource.cache
+C:\Visual_Programming\BTTH3_NguyenVanDien_24520300\Bai05\obj\Debug\Bai05.csproj.CoreCompileInputs.cache
+C:\Visual_Programming\BTTH3_NguyenVanDien_24520300\Bai05\obj\Debug\Bai05.exe
+C:\Visual_Programming\BTTH3_NguyenVanDien_24520300\Bai05\obj\Debug\Bai05.pdb
+C:\Visual_Programming\BTTH3_NguyenVanDien_24520300\Bai05\obj\Debug\Bai05.exe.config
