@@ -70,16 +70,6 @@ namespace SourceForDataBase.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        public static byte[] audio_club_amapiano_319840 {
-            get {
-                object obj = ResourceManager.GetObject("audio_club_amapiano_319840", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         public static System.IO.UnmanagedMemoryStream audio_memphis_trap {
