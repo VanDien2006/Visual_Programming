@@ -108,6 +108,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Asset\audio-club-amapiano.wav" />
     <Content Include="Asset\Background.png" />
     <Content Include="Asset\Block-Empty.png" />
     <Content Include="Asset\Block-I.png" />
@@ -118,6 +119,8 @@
     <Content Include="Asset\Block-T.png" />
     <Content Include="Asset\Block-Z.png" />
     <Content Include="Asset\Icon.ico" />
+    <None Include="Asset\memphis-trap-wav.wav" />
+    <None Include="Asset\the-jazz-music-background.wav" />
     <Content Include="Asset\TileBlue.png" />
     <Content Include="Asset\TileCyan.png" />
     <Content Include="Asset\TileEmpty.png" />
@@ -126,6 +129,7 @@
     <Content Include="Asset\TilePurple.png" />
     <Content Include="Asset\TileRed.png" />
     <Content Include="Asset\TileYellow.png" />
+    <None Include="Resources\audio-club-amapiano-319840.wav" />
     <None Include="Resources\audio-club-amapiano-319840.mp3" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

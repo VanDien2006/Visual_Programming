@@ -38,9 +38,14 @@ namespace SourceForDataBase
         bool isRunning = false;   // game đã từng start chưa
         bool isPaused = false;    // game đang tạm dừng
 
+        private System.Media.SoundPlayer bgmPlayer;
+
         public Form2()
         {
             InitializeComponent();
+
+            bgmPlayer = new System.Media.SoundPlayer(Properties.Resources.audio_club_amapiano);
+            bgmPlayer.Load();
 
             typeof(Panel).InvokeMember(
             "DoubleBuffered",
@@ -367,6 +372,8 @@ namespace SourceForDataBase
 
         private void btnStart_Click(object sender, EventArgs e)
         {
+            bgmPlayer.PlayLooping();   // phát lặp vô hạn
+
             for (int x = 0; x < BOARD_WIDTH; x++)
             {
                 for (int y = 0; y < BOARD_HEIGHT; y++)
@@ -399,6 +406,7 @@ namespace SourceForDataBase
                 isPaused = true;
                 btnPause.BackColor = Color.Gray;
                 btnPause.Text = "Resume";
+                bgmPlayer.Stop();   // dừng nhạc khi pause
             }
             else
             {
@@ -406,6 +414,7 @@ namespace SourceForDataBase
                 isPaused = false;
                 btnPause.BackColor = Color.White;
                 btnPause.Text = "Pause";
+                bgmPlayer.PlayLooping(); // phát lại khi resume
             }
 
             this.ActiveControl = null;
