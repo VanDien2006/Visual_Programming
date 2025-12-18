@@ -1,0 +1,13 @@
+C:\Visual_Programming\DoAn_Tetris_master\SourceForDataBase\bin\Debug\SourceForDataBase.exe.config
+C:\Visual_Programming\DoAn_Tetris_master\SourceForDataBase\bin\Debug\SourceForDataBase.exe
+C:\Visual_Programming\DoAn_Tetris_master\SourceForDataBase\bin\Debug\SourceForDataBase.pdb
+C:\Visual_Programming\DoAn_Tetris_master\SourceForDataBase\obj\Debug\SourceForDataBase.csproj.AssemblyReference.cache
+C:\Visual_Programming\DoAn_Tetris_master\SourceForDataBase\obj\Debug\SourceForDataBase.Form1.resources
+C:\Visual_Programming\DoAn_Tetris_master\SourceForDataBase\obj\Debug\SourceForDataBase.Form2.resources
+C:\Visual_Programming\DoAn_Tetris_master\SourceForDataBase\obj\Debug\SourceForDataBase.FormRegister.resources
+C:\Visual_Programming\DoAn_Tetris_master\SourceForDataBase\obj\Debug\SourceForDataBase.GameForm.resources
+C:\Visual_Programming\DoAn_Tetris_master\SourceForDataBase\obj\Debug\SourceForDataBase.Properties.Resources.resources
+C:\Visual_Programming\DoAn_Tetris_master\SourceForDataBase\obj\Debug\SourceForDataBase.csproj.GenerateResource.cache
+C:\Visual_Programming\DoAn_Tetris_master\SourceForDataBase\obj\Debug\SourceForDataBase.csproj.CoreCompileInputs.cache
+C:\Visual_Programming\DoAn_Tetris_master\SourceForDataBase\obj\Debug\SourceForDataBase.exe
+C:\Visual_Programming\DoAn_Tetris_master\SourceForDataBase\obj\Debug\SourceForDataBase.pdb
