@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SourceForDataBase.Helpers;
 using static SourceForDataBase.Form1;
 
 namespace SourceForDataBase
@@ -17,6 +18,7 @@ namespace SourceForDataBase
         public FormRegister()
         {
             InitializeComponent();
+            FormResizer.Register(this);
         }
         private void btnRegister_Click(object sender, EventArgs e)
         {
@@ -87,6 +89,12 @@ namespace SourceForDataBase
         private void FormRegister_Load(object sender, EventArgs e)
         {
 
+        }
+
+        protected override void OnFormClosed(FormClosedEventArgs e)
+        {
+            FormResizer.Unregister(this);
+            base.OnFormClosed(e);
         }
     }
 }

@@ -1,10 +1,12 @@
-﻿using System;
+﻿using SourceForDataBase.Helpers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -40,9 +42,51 @@ namespace SourceForDataBase
 
         private System.Media.SoundPlayer bgmPlayer;
 
-        public Form2()
+        private void NextPiecePanel_Paint(object sender, PaintEventArgs e)
+        {
+            if (nextPiece.shape == null) return;
+
+            Graphics g = e.Graphics;
+
+            Image img = tileImages[(int)nextPiece.type];
+
+            int rows = nextPiece.shape.GetLength(0);
+            int cols = nextPiece.shape.GetLength(1);
+
+            int offsetX = (nextPiecePanel.Width - cols * BLOCK_SIZE) / 2;
+            int offsetY = (nextPiecePanel.Height - rows * BLOCK_SIZE) / 2;
+
+            for (int r = 0; r < rows; r++)
+            {
+                for (int c = 0; c < cols; c++)
+                {
+                    if (nextPiece.shape[r, c])
+                    {
+                        Rectangle rect = new Rectangle(
+                            offsetX + c * BLOCK_SIZE,
+                            offsetY + r * BLOCK_SIZE,
+                            BLOCK_SIZE,
+                            BLOCK_SIZE
+                        );
+
+                        g.DrawImage(img, rect);
+                    }
+                }
+            }
+        }
+
+        private int currentUserId;
+        private string currentUserName;
+
+        public Form2(int userId, string userName)
         {
             InitializeComponent();
+            FormResizer.Register(this);
+
+            currentUserId = userId;
+            currentUserName = userName;
+
+            nextPiecePanel.Paint += NextPiecePanel_Paint;
 
             bgmPlayer = new System.Media.SoundPlayer(Properties.Resources.audio_club_amapiano);
             bgmPlayer.Load();
@@ -87,14 +131,20 @@ namespace SourceForDataBase
         }
         private void Form2_Load(object sender, EventArgs e)
         {
+            lblUserName.Text = "UserName: " + currentUserName;
+
             btnPause.Visible = false;
             btnPause.Enabled = false;
+
+            // Lấy thông tin user để hiển thị
+
         }
 
         private void GameBoardPanel_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
-            e.Graphics.DrawImage(Properties.Resources.Background, new Rectangle(0, 0, gameBoardPanel.Width, gameBoardPanel.Height));
+
+            e.Graphics.DrawRectangle(new Pen(Color.White),new Rectangle(0, 0, gameBoardPanel.Width, gameBoardPanel.Height));
             for (int y = 0; y < BOARD_HEIGHT; y++)
             {
                 for (int x = 0; x < BOARD_WIDTH; x++)
@@ -142,26 +192,87 @@ namespace SourceForDataBase
         }
 
         private Piece currentPiece;
+        private Piece nextPiece;
 
         Random rand = new Random();
-        private void InitializeNewPiece()
+
+        private Piece TaoKhoiNgauNhien()
         {
             var (shape, type) = tetrominoes[rand.Next(tetrominoes.Count)];
 
-            currentPiece = new Piece
+            return new Piece
             {
                 shape = shape,
                 type = type,
-                x = BOARD_WIDTH / 2 - shape.GetLength(1) / 2,
+                x = 0,
                 y = 0
             };
+        }
+        private void InitializeNewPiece()
+        {
+            if (nextPiece.shape == null)
+            {
+                currentPiece = TaoKhoiNgauNhien();
+                nextPiece = TaoKhoiNgauNhien();
+            }
+            else
+            {
+                currentPiece = nextPiece;
+                nextPiece = TaoKhoiNgauNhien();
+            }
+
+            currentPiece.x = BOARD_WIDTH / 2 - currentPiece.shape.GetLength(1) / 2;
+            currentPiece.y = 0;
 
             if (!CoTheXuong(currentPiece, 0, 0))
             {
                 gameTimer.Stop();
+                LuuKetQua();
                 MessageBox.Show("Game Over!");
-
+                ResetGame();
+                return;
             }
+
+            nextPiecePanel.Invalidate();
+        }
+
+        private void LuuKetQua()
+        {
+            string time = DateTime.Now.ToString("HH:mm:ss dd/MM/yyyy");
+            lstScoreHistory.Items.Insert(0, $"{time} - Score: {score}");
+        }
+
+        private void ResetGame()
+        {
+            nextPiece = new Piece();          
+            nextPiecePanel.Invalidate();
+
+            gameTimer.Stop();
+            bgmPlayer.Stop();
+
+            // Reset lưới
+            for (int x = 0; x < BOARD_WIDTH; x++)
+                for (int y = 0; y < BOARD_HEIGHT; y++)
+                    gameGrid[x, y] = TileType.Empty;
+
+            // Reset điểm
+            score = 0;
+            lblScore.Text = "Score: 0";
+
+            // Reset khối hiện tại
+            currentPiece = new Piece();
+
+            // Reset trạng thái
+            isPaused = false;
+
+            // Reset UI
+            btnStart.Enabled = true;
+            btnPause.Visible = false;
+            btnPause.Enabled = false;
+            btnPause.Text = "Pause";
+            btnPause.BackColor = Color.White;
+
+            gameBoardPanel.Invalidate();
         }
 
         private void DrawCurrentPiece(Graphics g)
@@ -343,7 +454,7 @@ namespace SourceForDataBase
                     }
 
                     score += 100; // cộng điểm
-                    scoreLabel.Text = "Score: " + score;
+                    lblScore.Text = score.ToString();
 
                     y++; // kiểm tra lại hàng vừa đẩy xuống
                 }
@@ -386,7 +497,7 @@ namespace SourceForDataBase
             gameBoardPanel.Invalidate();
 
             btnStart.Enabled = false;
-            scoreLabel.Text = "Score: 0";
+            lblScore.Text = "0";
 
             gameTimer.Start();
 
@@ -423,11 +534,85 @@ namespace SourceForDataBase
 
         private void btnQuit_Click(object sender, EventArgs e)
         {
-            btnPause_Click(sender, e);
+            bool wasPaused = isPaused;
+
+            if (!isPaused)
+            {
+                gameTimer.Stop();
+                bgmPlayer.Stop();
+            }
+
             DialogResult result = MessageBox.Show("Bạn có muốn thoát trò chơi?", "Quit Game", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            
             if (result == DialogResult.Yes)
             {
                 this.Close();
+            }
+            else
+            {
+                if (!wasPaused)
+                {
+                    gameTimer.Start();
+                    bgmPlayer.PlayLooping();
+                }
+            }
+
+            this.Focus();
+        }
+
+        public class GameSaveData
+        {
+            public string BoardState { get; set; }
+            public string CurrentPiece { get; set; }
+            public string NextPiece { get; set; }
+            public int Score { get; set; }
+        }
+
+
+        public GameSaveData GetGameSaveData()
+        {
+            return new GameSaveData
+            {
+                BoardState = SerializeBoard(),
+                CurrentPiece = SerializePiece(currentPiece),
+                NextPiece = SerializePiece(nextPiece),
+                Score = score,
+            };
+        }
+
+        private string SerializeBoard()
+        {
+            StringBuilder sb = new StringBuilder();
+
+            for (int y = 0; y < BOARD_HEIGHT; y++)
+            {
+                for (int x = 0; x < BOARD_WIDTH; x++)
+                {
+                    sb.Append((int)gameGrid[x, y]);
+                }
+                sb.Append(";");
+            }
+            return sb.ToString();
+        }
+
+        private string SerializePiece(Piece piece)
+        {
+            if (piece.shape == null) return "";
+
+            return $"{piece.type},{piece.x},{piece.y}";
+        }
+
+        private void Form2_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Dừng game
+            gameTimer.Stop();
+
+            // Dừng nhạc
+            if (bgmPlayer != null)
+            {
+                bgmPlayer.Stop();
+                bgmPlayer.Dispose(); // rất nên có
+                bgmPlayer = null;
             }
         }
     }

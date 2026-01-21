@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SourceForDataBase.Helpers;
 
 namespace SourceForDataBase
 {
@@ -16,6 +17,7 @@ namespace SourceForDataBase
         public Form1()
         {
             InitializeComponent();
+            FormResizer.Register(this);
         }
         //tao chuoi ket noi den database
 
@@ -54,12 +56,16 @@ namespace SourceForDataBase
                 if (result != null)
                 {
                     int userId = Convert.ToInt32(result);
-                    MessageBox.Show("Đăng nhập thành công!");
 
-                    // Mở game form
-                    GameForm game = new GameForm(userId);
-                    game.Show();
+                    txtUser.Clear();
+                    txtPass.Clear();
+
                     this.Hide();
+
+                    Form2 f2 = new Form2(userId, username);
+                    f2.ShowDialog();
+
+                    this.Show();
                 }
                 else
                 {
@@ -173,6 +179,27 @@ namespace SourceForDataBase
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        protected override void OnFormClosed(FormClosedEventArgs e)
+        {
+            FormResizer.Unregister(this);
+            base.OnFormClosed(e);
         }
     }
 }

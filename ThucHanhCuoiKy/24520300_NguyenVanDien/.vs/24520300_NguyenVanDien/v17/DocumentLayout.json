@@ -1,0 +1,57 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Visual_Programming\\ThucHanhCuoiKy\\24520300_NguyenVanDien\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8E558E06-806B-43C6-97FB-70223E6FA0E7}|24520300_NguyenVanDien.csproj|C:\\Visual_Programming\\ThucHanhCuoiKy\\24520300_NguyenVanDien\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8E558E06-806B-43C6-97FB-70223E6FA0E7}|24520300_NguyenVanDien.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E558E06-806B-43C6-97FB-70223E6FA0E7}|24520300_NguyenVanDien.csproj|c:\\visual_programming\\thuchanhcuoiky\\24520300_nguyenvandien\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E558E06-806B-43C6-97FB-70223E6FA0E7}|24520300_NguyenVanDien.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Visual_Programming\\ThucHanhCuoiKy\\24520300_NguyenVanDien\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Visual_Programming\\ThucHanhCuoiKy\\24520300_NguyenVanDien\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAALMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T01:02:09.424Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Visual_Programming\\ThucHanhCuoiKy\\24520300_NguyenVanDien\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Visual_Programming\\ThucHanhCuoiKy\\24520300_NguyenVanDien\\Form1.cs [Design]",
+              "RelativeToolTip": "Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T00:58:37.795Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

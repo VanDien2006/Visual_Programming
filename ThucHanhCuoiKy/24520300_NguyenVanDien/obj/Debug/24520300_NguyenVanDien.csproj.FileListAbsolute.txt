@@ -1,0 +1,11 @@
+C:\Visual_Programming\ThucHanhCuoiKy\24520300_NguyenVanDien\bin\Debug\24520300_NguyenVanDien.exe.config
+C:\Visual_Programming\ThucHanhCuoiKy\24520300_NguyenVanDien\bin\Debug\24520300_NguyenVanDien.exe
+C:\Visual_Programming\ThucHanhCuoiKy\24520300_NguyenVanDien\bin\Debug\24520300_NguyenVanDien.pdb
+C:\Visual_Programming\ThucHanhCuoiKy\24520300_NguyenVanDien\obj\Debug\24520300_NguyenVanDien.csproj.AssemblyReference.cache
+C:\Visual_Programming\ThucHanhCuoiKy\24520300_NguyenVanDien\obj\Debug\_24520300_NguyenVanDien.Form1.resources
+C:\Visual_Programming\ThucHanhCuoiKy\24520300_NguyenVanDien\obj\Debug\_24520300_NguyenVanDien.Properties.Resources.resources
+C:\Visual_Programming\ThucHanhCuoiKy\24520300_NguyenVanDien\obj\Debug\24520300_NguyenVanDien.csproj.GenerateResource.cache
+C:\Visual_Programming\ThucHanhCuoiKy\24520300_NguyenVanDien\obj\Debug\24520300_NguyenVanDien.csproj.CoreCompileInputs.cache
+C:\Visual_Programming\ThucHanhCuoiKy\24520300_NguyenVanDien\obj\Debug\24520300_NguyenVanDien.exe
+C:\Visual_Programming\ThucHanhCuoiKy\24520300_NguyenVanDien\obj\Debug\24520300_NguyenVanDien.pdb
+C:\Visual_Programming\ThucHanhCuoiKy\24520300_NguyenVanDien\obj\Debug\24520300_NguyenVanDien.exe.config
